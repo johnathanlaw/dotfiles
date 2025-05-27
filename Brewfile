@@ -9,13 +9,14 @@ brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
+brew 'ffmpeg'
 
 # Casks
 ## Browsers
 cask 'google-chrome'
 cask 'microsoft-edge'
 
-# Utilities
+## Utilities
 cask 'rectangle'
 cask 'alfred'
 cask 'slack'
