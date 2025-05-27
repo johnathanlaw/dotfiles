@@ -10,6 +10,7 @@ brew 'zsh-completions'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
 brew 'ffmpeg'
+brew 'yt-dlp'
 
 # Casks
 ## Browsers
