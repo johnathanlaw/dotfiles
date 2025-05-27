@@ -109,3 +109,7 @@ alias -g pc='pnpm create '
 
 # nvm
 alias -g nln='nvm install-latest-npm'
+
+# docker
+alias -g dcu='docker compose up --detatch --wait'
+alias -g dcd='docker compose down --volumes'
