@@ -1,0 +1,46 @@
+[user]
+  name = Johnathan Law
+  email = johnathan.law@gmail.com
+	signingkey = /Users/johnathanlaw/.ssh/id_ed25519.pub
+[core]
+	excludesfile = /Users/johnathanlaw/.gitignore_global
+	# editor = code --wait
+[alias]
+	st = status
+	sw = switch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lgG = log --oneline --graph --decorate --name-status
+  log2 = log --oneline --graph --decorate --name-status
+  log1 = log --name-status
+  ch = checkout
+  br = branch
+  com = commit
+  cmm = commit -m
+  amend = commit --amend
+  prb = pull --rebase
+	swm = switch main
+	swmp = !git sw main && git pull && git fetch -p
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/johnathanlaw/.ssh/allowed_signers
+[commit]
+	gpgsign = true
+	verbose = true
+[init]
+	templatedir = /Users/johnathanlaw/.git-templates/
+	defaultBranch = main
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[tag]
+	sort = version:refname
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[merge]
+	conflictstyle = zdiff3

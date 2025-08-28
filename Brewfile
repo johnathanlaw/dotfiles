@@ -27,6 +27,8 @@ cask 'hiddenbar'
 cask 'josm'
 cask 'visual-studio-code'
 cask 'docker'
+cask 'lm-studio'
+cask 'bruno'
 
 ## Notion
 cask 'notion'
