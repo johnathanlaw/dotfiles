@@ -43,6 +43,10 @@ plugins=(
 # Source Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
 # Autosuggest settings
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
@@ -71,8 +75,17 @@ function _load_ssh_agent() {
 autoload -U add-zsh-hook
 add-zsh-hook precmd _load_ssh_agent
 
-# Path configurations
-export PATH="~/.local/bin:$PATH"
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# Added by Claude CLI
+export PATH="$PATH:$HOME/.local/bin"
+# End of Claude CLI section
 
 # Source aliases last
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
