@@ -72,9 +72,7 @@ autoload -U add-zsh-hook
 add-zsh-hook precmd _load_ssh_agent
 
 # Path configurations
-export VOLTA_HOME="$HOME/.volta"
-PATH="$VOLTA_HOME/bin:$PATH:/home/scott/.turso"
-export PATH
+export PATH="~/.local/bin:$PATH"
 
 # Source aliases last
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
